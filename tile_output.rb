@@ -10,20 +10,20 @@ class Tile
     @weight = weight
   end
 
-  def left_edges_with_names
+  def left_tile_edges_with_names
     edges.rotate(1).zip(['', ' 1', ' 2', ' 3']).map {|edge, suffix| [edge, @name + suffix ]}
   end
 
-  def right_edges_with_names
+  def right_tile_edges_with_names
     edges.rotate(3).zip(['', ' 1', ' 2', ' 3']).map {|edge, suffix| [edge, @name + suffix ]}
   end
 
-  def left_edges_to_check(&block)
-    edges_to_check(left_edges_with_names, &block)
+  def left_tile_edges_to_check(&block)
+    edges_to_check(left_tile_edges_with_names, &block)
   end
 
-  def right_edges_to_check(&block)
-    edges_to_check(right_edges_with_names, &block)
+  def right_tile_edges_to_check(&block)
+    edges_to_check(right_tile_edges_with_names, &block)
   end
 
   def edges_to_check(edges, &block)
@@ -67,8 +67,8 @@ end
 TILES.each.with_index do |left_tile, left_tile_index|
   TILES.each.with_index do |right_tile, right_tile_index|
     next if left_tile_index > right_tile_index
-    left_tile.left_edges_to_check.each do |(left_edge, left_edge_name)|
-      right_tile.right_edges_to_check.each do |(right_edge, right_edge_name)|
+    left_tile.left_tile_edges_to_check.each do |(left_edge, left_edge_name)|
+      right_tile.right_tile_edges_to_check.each do |(right_edge, right_edge_name)|
         if left_edge == right_edge
           output[:neighbors] << { left: left_edge_name, right: right_edge_name }
         end

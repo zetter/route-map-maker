@@ -1,1 +1,515 @@
-{"path":"/tiles/","tilesize":50,"tiles":[{"name":"corner","symmetry":"L","weight":1.0},{"name":"cross","symmetry":"I","weight":1.0},{"name":"empty","symmetry":"X","weight":3.0},{"name":"line","symmetry":"I","weight":1.0},{"name":"t","symmetry":"T","weight":0.5},{"name":"end","symmetry":"T","weight":0.1},{"name":"station","symmetry":"I","weight":0.5},{"name":"line-b","symmetry":"I","weight":0.3},{"name":"corner-b","symmetry":"L","weight":0.3},{"name":"cross-b-r","symmetry":"I","weight":0.1},{"name":"cross-r-b","symmetry":"I","weight":0.1}],"neighbors":[{"left":"corner","right":"corner 1"},{"left":"corner 1","right":"corner"},{"left":"corner","right":"cross"},{"left":"corner","right":"cross 1"},{"left":"corner 1","right":"empty"},{"left":"corner","right":"line"},{"left":"corner 1","right":"line 1"},{"left":"corner","right":"t"},{"left":"corner","right":"t 3"},{"left":"corner 1","right":"t 1"},{"left":"corner","right":"end 3"},{"left":"corner 1","right":"end"},{"left":"corner 1","right":"end 1"},{"left":"corner","right":"station 1"},{"left":"corner 1","right":"station"},{"left":"corner 1","right":"line-b 1"},{"left":"corner 1","right":"corner-b"},{"left":"corner","right":"cross-b-r"},{"left":"corner","right":"cross-r-b 1"},{"left":"cross","right":"cross"},{"left":"cross","right":"cross 1"},{"left":"cross 1","right":"cross"},{"left":"cross 1","right":"cross 1"},{"left":"cross","right":"line"},{"left":"cross 1","right":"line"},{"left":"cross","right":"t"},{"left":"cross","right":"t 3"},{"left":"cross 1","right":"t"},{"left":"cross 1","right":"t 3"},{"left":"cross","right":"end 3"},{"left":"cross 1","right":"end 3"},{"left":"cross","right":"station 1"},{"left":"cross 1","right":"station 1"},{"left":"cross","right":"cross-b-r"},{"left":"cross 1","right":"cross-b-r"},{"left":"cross","right":"cross-r-b 1"},{"left":"cross 1","right":"cross-r-b 1"},{"left":"empty","right":"empty"},{"left":"empty","right":"line 1"},{"left":"empty","right":"t 1"},{"left":"empty","right":"end"},{"left":"empty","right":"end 1"},{"left":"empty","right":"station"},{"left":"empty","right":"line-b 1"},{"left":"empty","right":"corner-b"},{"left":"line","right":"line"},{"left":"line 1","right":"line 1"},{"left":"line","right":"t"},{"left":"line","right":"t 3"},{"left":"line 1","right":"t 1"},{"left":"line","right":"end 3"},{"left":"line 1","right":"end"},{"left":"line 1","right":"end 1"},{"left":"line","right":"station 1"},{"left":"line 1","right":"station"},{"left":"line 1","right":"line-b 1"},{"left":"line 1","right":"corner-b"},{"left":"line","right":"cross-b-r"},{"left":"line","right":"cross-r-b 1"},{"left":"t","right":"t"},{"left":"t","right":"t 3"},{"left":"t 1","right":"t"},{"left":"t 1","right":"t 3"},{"left":"t 3","right":"t 1"},{"left":"t","right":"end 3"},{"left":"t 1","right":"end 3"},{"left":"t 3","right":"end"},{"left":"t 3","right":"end 1"},{"left":"t","right":"station 1"},{"left":"t 1","right":"station 1"},{"left":"t 3","right":"station"},{"left":"t 3","right":"line-b 1"},{"left":"t 3","right":"corner-b"},{"left":"t","right":"cross-b-r"},{"left":"t 1","right":"cross-b-r"},{"left":"t","right":"cross-r-b 1"},{"left":"t 1","right":"cross-r-b 1"},{"left":"end","right":"end"},{"left":"end","right":"end 1"},{"left":"end 1","right":"end 3"},{"left":"end 3","right":"end"},{"left":"end 3","right":"end 1"},{"left":"end","right":"station"},{"left":"end 1","right":"station 1"},{"left":"end 3","right":"station"},{"left":"end","right":"line-b 1"},{"left":"end 3","right":"line-b 1"},{"left":"end","right":"corner-b"},{"left":"end 3","right":"corner-b"},{"left":"end 1","right":"cross-b-r"},{"left":"end 1","right":"cross-r-b 1"},{"left":"station","right":"station"},{"left":"station 1","right":"station 1"},{"left":"station","right":"line-b 1"},{"left":"station","right":"corner-b"},{"left":"station 1","right":"cross-b-r"},{"left":"station 1","right":"cross-r-b 1"},{"left":"line-b","right":"line-b"},{"left":"line-b 1","right":"line-b 1"},{"left":"line-b","right":"corner-b 1"},{"left":"line-b 1","right":"corner-b"},{"left":"line-b","right":"cross-b-r 1"},{"left":"line-b","right":"cross-r-b"},{"left":"corner-b","right":"corner-b 1"},{"left":"corner-b 1","right":"corner-b"},{"left":"corner-b","right":"cross-b-r 1"},{"left":"corner-b","right":"cross-r-b"},{"left":"cross-b-r","right":"cross-b-r"},{"left":"cross-b-r 1","right":"cross-b-r 1"},{"left":"cross-b-r","right":"cross-r-b 1"},{"left":"cross-b-r 1","right":"cross-r-b"},{"left":"cross-r-b","right":"cross-r-b"},{"left":"cross-r-b 1","right":"cross-r-b 1"}]}
+{
+  "path": "/tiles/",
+  "tilesize": 50,
+  "tiles": [
+    {
+      "name": "corner",
+      "symmetry": "L",
+      "weight": 1.0
+    },
+    {
+      "name": "cross",
+      "symmetry": "I",
+      "weight": 1.0
+    },
+    {
+      "name": "empty",
+      "symmetry": "X",
+      "weight": 3.0
+    },
+    {
+      "name": "line",
+      "symmetry": "I",
+      "weight": 1.0
+    },
+    {
+      "name": "t",
+      "symmetry": "T",
+      "weight": 0.5
+    },
+    {
+      "name": "end",
+      "symmetry": "T",
+      "weight": 0.1
+    },
+    {
+      "name": "station",
+      "symmetry": "I",
+      "weight": 0.5
+    },
+    {
+      "name": "line-b",
+      "symmetry": "I",
+      "weight": 0.3
+    },
+    {
+      "name": "corner-b",
+      "symmetry": "L",
+      "weight": 0.3
+    },
+    {
+      "name": "cross-b-r",
+      "symmetry": "I",
+      "weight": 0.1
+    },
+    {
+      "name": "cross-r-b",
+      "symmetry": "I",
+      "weight": 0.1
+    }
+  ],
+  "neighbors": [
+    {
+      "left": "corner",
+      "right": "corner 1"
+    },
+    {
+      "left": "corner 1",
+      "right": "corner"
+    },
+    {
+      "left": "corner",
+      "right": "cross"
+    },
+    {
+      "left": "corner",
+      "right": "cross 1"
+    },
+    {
+      "left": "corner 1",
+      "right": "empty"
+    },
+    {
+      "left": "corner",
+      "right": "line"
+    },
+    {
+      "left": "corner 1",
+      "right": "line 1"
+    },
+    {
+      "left": "corner",
+      "right": "t"
+    },
+    {
+      "left": "corner",
+      "right": "t 3"
+    },
+    {
+      "left": "corner 1",
+      "right": "t 1"
+    },
+    {
+      "left": "corner",
+      "right": "end 3"
+    },
+    {
+      "left": "corner 1",
+      "right": "end"
+    },
+    {
+      "left": "corner 1",
+      "right": "end 1"
+    },
+    {
+      "left": "corner",
+      "right": "station 1"
+    },
+    {
+      "left": "corner 1",
+      "right": "station"
+    },
+    {
+      "left": "corner 1",
+      "right": "line-b 1"
+    },
+    {
+      "left": "corner 1",
+      "right": "corner-b"
+    },
+    {
+      "left": "corner",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "corner",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "cross",
+      "right": "cross"
+    },
+    {
+      "left": "cross",
+      "right": "cross 1"
+    },
+    {
+      "left": "cross 1",
+      "right": "cross"
+    },
+    {
+      "left": "cross 1",
+      "right": "cross 1"
+    },
+    {
+      "left": "cross",
+      "right": "line"
+    },
+    {
+      "left": "cross 1",
+      "right": "line"
+    },
+    {
+      "left": "cross",
+      "right": "t"
+    },
+    {
+      "left": "cross",
+      "right": "t 3"
+    },
+    {
+      "left": "cross 1",
+      "right": "t"
+    },
+    {
+      "left": "cross 1",
+      "right": "t 3"
+    },
+    {
+      "left": "cross",
+      "right": "end 3"
+    },
+    {
+      "left": "cross 1",
+      "right": "end 3"
+    },
+    {
+      "left": "cross",
+      "right": "station 1"
+    },
+    {
+      "left": "cross 1",
+      "right": "station 1"
+    },
+    {
+      "left": "cross",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "cross 1",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "cross",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "cross 1",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "empty",
+      "right": "empty"
+    },
+    {
+      "left": "empty",
+      "right": "line 1"
+    },
+    {
+      "left": "empty",
+      "right": "t 1"
+    },
+    {
+      "left": "empty",
+      "right": "end"
+    },
+    {
+      "left": "empty",
+      "right": "end 1"
+    },
+    {
+      "left": "empty",
+      "right": "station"
+    },
+    {
+      "left": "empty",
+      "right": "line-b 1"
+    },
+    {
+      "left": "empty",
+      "right": "corner-b"
+    },
+    {
+      "left": "line",
+      "right": "line"
+    },
+    {
+      "left": "line 1",
+      "right": "line 1"
+    },
+    {
+      "left": "line",
+      "right": "t"
+    },
+    {
+      "left": "line",
+      "right": "t 3"
+    },
+    {
+      "left": "line 1",
+      "right": "t 1"
+    },
+    {
+      "left": "line",
+      "right": "end 3"
+    },
+    {
+      "left": "line 1",
+      "right": "end"
+    },
+    {
+      "left": "line 1",
+      "right": "end 1"
+    },
+    {
+      "left": "line",
+      "right": "station 1"
+    },
+    {
+      "left": "line 1",
+      "right": "station"
+    },
+    {
+      "left": "line 1",
+      "right": "line-b 1"
+    },
+    {
+      "left": "line 1",
+      "right": "corner-b"
+    },
+    {
+      "left": "line",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "line",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "t",
+      "right": "t"
+    },
+    {
+      "left": "t",
+      "right": "t 3"
+    },
+    {
+      "left": "t 1",
+      "right": "t"
+    },
+    {
+      "left": "t 1",
+      "right": "t 3"
+    },
+    {
+      "left": "t 3",
+      "right": "t 1"
+    },
+    {
+      "left": "t",
+      "right": "end 3"
+    },
+    {
+      "left": "t 1",
+      "right": "end 3"
+    },
+    {
+      "left": "t 3",
+      "right": "end"
+    },
+    {
+      "left": "t 3",
+      "right": "end 1"
+    },
+    {
+      "left": "t",
+      "right": "station 1"
+    },
+    {
+      "left": "t 1",
+      "right": "station 1"
+    },
+    {
+      "left": "t 3",
+      "right": "station"
+    },
+    {
+      "left": "t 3",
+      "right": "line-b 1"
+    },
+    {
+      "left": "t 3",
+      "right": "corner-b"
+    },
+    {
+      "left": "t",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "t 1",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "t",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "t 1",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "end",
+      "right": "end"
+    },
+    {
+      "left": "end",
+      "right": "end 1"
+    },
+    {
+      "left": "end 1",
+      "right": "end 3"
+    },
+    {
+      "left": "end 3",
+      "right": "end"
+    },
+    {
+      "left": "end 3",
+      "right": "end 1"
+    },
+    {
+      "left": "end",
+      "right": "station"
+    },
+    {
+      "left": "end 1",
+      "right": "station 1"
+    },
+    {
+      "left": "end 3",
+      "right": "station"
+    },
+    {
+      "left": "end",
+      "right": "line-b 1"
+    },
+    {
+      "left": "end 3",
+      "right": "line-b 1"
+    },
+    {
+      "left": "end",
+      "right": "corner-b"
+    },
+    {
+      "left": "end 3",
+      "right": "corner-b"
+    },
+    {
+      "left": "end 1",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "end 1",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "station",
+      "right": "station"
+    },
+    {
+      "left": "station 1",
+      "right": "station 1"
+    },
+    {
+      "left": "station",
+      "right": "line-b 1"
+    },
+    {
+      "left": "station",
+      "right": "corner-b"
+    },
+    {
+      "left": "station 1",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "station 1",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "line-b",
+      "right": "line-b"
+    },
+    {
+      "left": "line-b 1",
+      "right": "line-b 1"
+    },
+    {
+      "left": "line-b",
+      "right": "corner-b 1"
+    },
+    {
+      "left": "line-b 1",
+      "right": "corner-b"
+    },
+    {
+      "left": "line-b",
+      "right": "cross-b-r 1"
+    },
+    {
+      "left": "line-b",
+      "right": "cross-r-b"
+    },
+    {
+      "left": "corner-b",
+      "right": "corner-b 1"
+    },
+    {
+      "left": "corner-b 1",
+      "right": "corner-b"
+    },
+    {
+      "left": "corner-b",
+      "right": "cross-b-r 1"
+    },
+    {
+      "left": "corner-b",
+      "right": "cross-r-b"
+    },
+    {
+      "left": "cross-b-r",
+      "right": "cross-b-r"
+    },
+    {
+      "left": "cross-b-r 1",
+      "right": "cross-b-r 1"
+    },
+    {
+      "left": "cross-b-r",
+      "right": "cross-r-b 1"
+    },
+    {
+      "left": "cross-b-r 1",
+      "right": "cross-r-b"
+    },
+    {
+      "left": "cross-r-b",
+      "right": "cross-r-b"
+    },
+    {
+      "left": "cross-r-b 1",
+      "right": "cross-r-b 1"
+    }
+  ]
+}

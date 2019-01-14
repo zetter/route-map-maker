@@ -143,4 +143,4 @@ neighbors.each do |(left, right)|
   data[:neighbors] << { left: left, right: right }
 end
 
-puts JSON.generate(data)
+puts JSON.pretty_generate(data)

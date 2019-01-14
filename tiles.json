@@ -1,0 +1,69 @@
+{
+  "path": "/tiles/",
+  "tilesize": 50,
+  "tiles": [
+    {
+      "name": "corner",
+      "symmetry": "L",
+      "edges": ["path", "path", "none", "none"]
+    },
+    {
+      "name": "cross",
+      "symmetry": "I",
+      "edges": ["path", "path", "path", "path"]
+    },
+    {
+      "name": "empty",
+      "weight": "3",
+      "symmetry": "X",
+      "edges": ["none", "none", "none", "none"]
+    },
+    {
+      "name": "line",
+      "symmetry": "I",
+      "edges": ["none", "path", "none", "path"]
+    },
+    {
+      "name": "t",
+      "symmetry": "T",
+      "weight": "0.5",
+      "edges": ["none", "path", "path", "path"]
+    },
+    {
+      "name": "end",
+      "weight": "0.1",
+      "symmetry": "T",
+      "edges": ["none", "none", "path", "none"]
+    },
+    {
+      "name": "station",
+      "weight": "0.5",
+      "symmetry": "I",
+      "edges": ["path", "none", "path", "none"]
+    },
+    {
+      "name": "line-b",
+      "weight": "0.3",
+      "symmetry": "I",
+      "edges": ["none", "path-b", "none", "path-b"]
+    },
+    {
+      "name": "corner-b",
+      "weight": "0.3",
+      "symmetry": "L",
+      "edges": ["path-b", "path-b", "none", "none"]
+    },
+    {
+      "name": "cross-b-r",
+      "weight": "0.1",
+      "symmetry": "I",
+      "edges": ["path-b", "path", "path-b", "path"]
+    },
+    {
+      "name": "cross-r-b",
+      "weight": "0.1",
+      "symmetry": "I",
+      "edges": ["path", "path-b", "path", "path-b"]
+    }
+  ]
+}

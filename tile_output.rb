@@ -47,73 +47,28 @@ class Tile
   end
 end
 
-TILES = [
+json_config = File.read('tiles.json')
+config = JSON.parse(json_config)
+TILES = config['tiles'].map do |tile_config|
   Tile.new(
-    name: 'corner',
-    symmetry: 'L',
-    edges: ['path', 'path', 'none', 'none']
-  ),
-  Tile.new(
-    name: 'cross',
-    symmetry: 'I',
-    edges: ['path', 'path', 'path', 'path']
-  ),
-  Tile.new(
-    name: 'empty',
-    weight: '3',
-    symmetry: 'X',
-    edges: ['none', 'none', 'none', 'none']
-  ),
-  Tile.new(
-    name: 'line',
-    symmetry: 'I',
-    edges: ['none', 'path', 'none', 'path']
-  ),
-  Tile.new(
-    name: 't',
-    symmetry: 'T',
-    weight: '0.5',
-    edges: ['none', 'path', 'path', 'path']
-  ),
-  Tile.new(
-    name: 'end',
-    weight: '0.1',
-    symmetry: 'T',
-    edges: ['none', 'none', 'path', 'none']
-  ),
-  Tile.new(
-    name: 'station',
-    weight: '0.5',
-    symmetry: 'I',
-    edges: ['path', 'none', 'path', 'none']
-  ),
-  Tile.new(
-    name: 'line-b',
-    weight: '0.3',
-    symmetry: 'I',
-    edges: ['none', 'path-b', 'none', 'path-b']
-  ),
-  Tile.new(
-    name: 'corner-b',
-    weight: '0.3',
-    symmetry: 'L',
-    edges: ['path-b', 'path-b', 'none', 'none']
-  ),
-  Tile.new(
-    name: 'cross-b-r',
-    weight: '0.1',
-    symmetry: 'I',
-    edges: ['path-b', 'path', 'path-b', 'path']
-  ),
-  Tile.new(
-    name: 'cross-r-b',
-    weight: '0.1',
-    symmetry: 'I',
-    edges: ['path', 'path-b', 'path', 'path-b']
+    name: tile_config['name'],
+    symmetry: tile_config['symmetry'],
+    edges: tile_config['edges'],
+    weight: tile_config.fetch('weight', 1),
   )
-]
+end
 
-neighbors = []
+output = {
+  path: config['path'],
+  tilesize: config['tilesize'],
+  tiles: [],
+  neighbors: []
+}
+
+
+TILES.each do |tile|
+  output[:tiles] << { name: tile.name, symmetry: tile.symmetry, weight: tile.weight.to_f }
+end
 
 TILES.each.with_index do |left_tile, left_tile_index|
   TILES.each.with_index do |right_tile, right_tile_index|
@@ -121,26 +76,11 @@ TILES.each.with_index do |left_tile, left_tile_index|
     left_tile.left_edges_to_check.each do |(left_edge, left_edge_name)|
       right_tile.right_edges_to_check.each do |(right_edge, right_edge_name)|
         if left_edge == right_edge
-          neighbors << [left_edge_name, right_edge_name]
+          output[:neighbors] << { left: left_edge_name, right: right_edge_name }
         end
       end
     end
   end
 end
 
-data = {
-  path: '/tiles/',
-  tilesize: 50,
-  tiles: [],
-  neighbors: []
-}
-
-TILES.each do |tile|
-  data[:tiles] << { name: tile.name, symmetry: tile.symmetry, weight: tile.weight.to_f }
-end
-
-neighbors.each do |(left, right)|
-  data[:neighbors] << { left: left, right: right }
-end
-
-puts JSON.pretty_generate(data)
+puts JSON.pretty_generate(output)

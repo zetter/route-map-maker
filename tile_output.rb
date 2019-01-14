@@ -77,4 +77,4 @@ TILES.each.with_index do |left_tile, left_tile_index|
   end
 end
 
-puts JSON.pretty_generate(output)
+File.write('static/tiles.json', JSON.pretty_generate(output))

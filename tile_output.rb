@@ -14,33 +14,27 @@ class Tile
     edges.rotate(1).zip(['', ' 1', ' 2', ' 3']).map {|edge, suffix| [edge, @name + suffix ]}
   end
 
-  def left_edges_to_check(&block)
-    if @symmetry == 'T'
-      left_edges_with_names.values_at(0, 1, 3).each(&block)
-    elsif @symmetry == 'L'
-      left_edges_with_names.values_at(0, 1).each(&block)
-    elsif @symmetry == 'I'
-      left_edges_with_names.values_at(0, 1).each(&block)
-    elsif @symmetry == 'X'
-      left_edges_with_names.values_at(0).each(&block)
-    else
-      raise 'unknown symmetry'
-    end
-  end
-
   def right_edges_with_names
     edges.rotate(3).zip(['', ' 1', ' 2', ' 3']).map {|edge, suffix| [edge, @name + suffix ]}
   end
 
+  def left_edges_to_check(&block)
+    edges_to_check(left_edges_with_names, &block)
+  end
+
   def right_edges_to_check(&block)
+    edges_to_check(right_edges_with_names, &block)
+  end
+
+  def edges_to_check(edges, &block)
     if @symmetry == 'T'
-      right_edges_with_names.values_at(0, 1, 3).each(&block)
+      edges.values_at(0, 1, 3).each(&block)
     elsif @symmetry == 'L'
-      right_edges_with_names.values_at(0, 1).each(&block)
+      edges.values_at(0, 1).each(&block)
     elsif @symmetry == 'I'
-      right_edges_with_names.values_at(0, 1).each(&block)
+      edges.values_at(0, 1).each(&block)
     elsif @symmetry == 'X'
-      right_edges_with_names.values_at(0).each(&block)
+      edges.values_at(0).each(&block)
     else
       raise 'unknown symmetry'
     end

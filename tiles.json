@@ -3,67 +3,166 @@
   "tilesize": 50,
   "tiles": [
     {
-      "name": "corner",
-      "symmetry": "L",
-      "edges": ["path", "path", "none", "none"]
-    },
-    {
-      "name": "cross",
-      "symmetry": "I",
-      "edges": ["path", "path", "path", "path"]
-    },
-    {
       "name": "empty",
-      "weight": "3",
       "symmetry": "X",
-      "edges": ["none", "none", "none", "none"]
+      "weight": "4",
+      "edges": ["e", "e", "e", "e"]
     },
     {
-      "name": "line",
-      "symmetry": "I",
-      "edges": ["none", "path", "none", "path"]
-    },
-    {
-      "name": "t",
+      "name": "b-halt",
       "symmetry": "T",
-      "weight": "0.5",
-      "edges": ["none", "path", "path", "path"]
-    },
-    {
-      "name": "end",
       "weight": "0.1",
+      "edges": ["e", "e", "blue", "e"]
+    },
+    {
+      "name": "b-i",
       "symmetry": "T",
-      "edges": ["none", "none", "path", "none"]
+      "weight": "1",
+      "edges": ["e", "blue", "interchange", "blue"]
     },
     {
-      "name": "station",
-      "weight": "0.5",
-      "symmetry": "I",
-      "edges": ["path", "none", "path", "none"]
-    },
-    {
-      "name": "line-b",
-      "weight": "0.3",
-      "symmetry": "I",
-      "edges": ["none", "path-b", "none", "path-b"]
-    },
-    {
-      "name": "corner-b",
-      "weight": "0.3",
+      "name": "b-l-tunnel",
       "symmetry": "L",
-      "edges": ["path-b", "path-b", "none", "none"]
+      "weight": "0.4",
+      "edges": ["blue-tunnel", "blue-tunnel", "e", "e"]
     },
     {
-      "name": "cross-b-r",
-      "weight": "0.1",
-      "symmetry": "I",
-      "edges": ["path-b", "path", "path-b", "path"]
+      "name": "b-l",
+      "symmetry": "L",
+      "weight": "1",
+      "edges": ["blue", "blue", "e", "e"]
     },
     {
-      "name": "cross-r-b",
-      "weight": "0.1",
+      "name": "b-station",
       "symmetry": "I",
-      "edges": ["path", "path-b", "path", "path-b"]
+      "weight": "2",
+      "edges": ["blue", "e", "blue", "e"]
+    },
+    {
+      "name": "b-t",
+      "symmetry": "T",
+      "weight": "1",
+      "edges": ["blue", "blue", "e", "blue"]
+    },
+    {
+      "name": "b-tunnel-start",
+      "symmetry": "T",
+      "weight": "1",
+      "edges": ["blue", "e", "blue-tunnel", "e"]
+    },
+    {
+      "name": "b-tunnel",
+      "symmetry": "T",
+      "weight": "1",
+      "edges": ["e", "blue-tunnel", "e", "blue-tunnel"]
+    },
+    {
+      "name": "b-under-r-bridge",
+      "symmetry": "I",
+      "weight": "1",
+      "edges": ["red", "blue", "red", "blue"]
+    },
+    {
+      "name": "b-under-r-tunnel",
+      "symmetry": "I",
+      "weight": "1",
+      "edges": ["red", "blue-tunnel", "red", "blue-tunnel"]
+    },
+    {
+      "name": "b-x",
+      "symmetry": "X",
+      "weight": "0.1",
+      "edges": ["blue", "blue", "blue", "blue"]
+    },
+    {
+      "name": "b",
+      "symmetry": "I",
+      "weight": "1",
+      "edges": ["e", "blue", "e", "blue"]
+    },
+    {
+      "name": "r-halt",
+      "symmetry": "T",
+      "weight": "0.1",
+      "edges": ["e", "e", "red", "e"]
+    },
+    {
+      "name": "r-i",
+      "symmetry": "T",
+      "weight": "1",
+      "edges": ["e", "red", "interchange", "red"]
+    },
+    {
+      "name": "r-l",
+      "symmetry": "L",
+      "weight": "1",
+      "edges": ["red", "red", "e", "e"]
+    },
+    {
+      "name": "r-station",
+      "symmetry": "I",
+      "weight": "2",
+      "edges": ["red", "e", "red", "e"]
+    },
+    {
+      "name": "r-t",
+      "symmetry": "T",
+      "weight": "1",
+      "edges": ["e", "red", "red", "red"]
+    },
+    {
+      "name": "r-x",
+      "symmetry": "X",
+      "weight": "1",
+      "edges": ["red", "red", "red", "red"]
+    },
+    {
+      "name": "r",
+      "symmetry": "I",
+      "weight": "1",
+      "edges": ["e", "red", "e", "red"]
+    },
+    {
+      "name": "road-l",
+      "symmetry": "L",
+      "weight": "0.5",
+      "edges": ["road", "road", "e", "e"]
+    },
+    {
+      "name": "road-over-b-bridge",
+      "symmetry": "I",
+      "weight": "0.5",
+      "edges": ["blue", "road", "blue", "road"]
+    },
+    {
+      "name": "road-t",
+      "symmetry": "T",
+      "weight": "0.1",
+      "edges": ["e", "road", "road", "road"]
+    },
+    {
+      "name": "road-under-r-bridge",
+      "symmetry": "I",
+      "weight": "0.1",
+      "edges": ["red", "road", "red", "road"]
+    },
+    {
+      "name": "road-x",
+      "symmetry": "X",
+      "weight": "0.1",
+      "edges": ["road", "road", "road", "road"]
+    },
+    {
+      "name": "road",
+      "symmetry": "I",
+      "weight": "0.5",
+      "edges": ["e", "road", "e", "road"]
+    },
+    {
+      "name": "road-halt",
+      "symmetry": "T",
+      "weight": "0.05",
+      "edges": ["e", "e", "road", "e"]
     }
   ]
 }

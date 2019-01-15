@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<title>KRZo</title>
+ <path stroke="#BE2D2C" d="M 250,0 V 500 M 0,250 H 130 m 240,0 H 500" stroke-width="100"/>
+ <path stroke="#80A080" d="m 100,140 50,40 v 140 l -50,40 m 300,-220 -50,40 v 140 l 50,40" stroke-width="40" fill="none"/>
+</svg>

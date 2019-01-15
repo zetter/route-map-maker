@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- created by axpde for Wikipedia -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="500" height="500" viewBox="0 0 500 500">
+<title>Kreuzung</title>
+
+<g stroke-width="100" fill="none">
+ <path d="M 0,250 H 130 M 370,250 H 500" stroke="#003399" />
+ <path d="M 250,0 V 500" stroke="#be2d2c" />
+ <g stroke="#80a080" stroke-width="40">
+  <polyline points="100,140 150,180 150,320 100,360" />
+  <polyline points="400,140 350,180 350,320 400,360" />
+ </g>
+</g>
+</svg>

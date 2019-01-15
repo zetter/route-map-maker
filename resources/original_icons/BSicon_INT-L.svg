@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+ <title>INT-L</title>
+ <path stroke="#BE2D2C" d="M 250,0 V 500" stroke-width="100"/>
+ <rect stroke="#000" fill="#FFF" x="125" y="125" width="500" height="250" rx="125" stroke-width="50"/>
+</svg>

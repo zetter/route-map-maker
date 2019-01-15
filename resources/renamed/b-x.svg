@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<title>uKRZlr+lr</title>
+<path d="M 0,250 H 500 M 250,0 V 500" stroke="#003399" stroke-width="100" fill="none" />
+<g stroke="#003399" stroke-width="50" fill="none">
+  <circle cx="0" cy="0" r="225" />
+  <circle cx="0" cy="500" r="225" />
+  <circle cx="500" cy="0" r="225" />
+  <circle cx="500" cy="500" r="225" />
+</g>
+</svg>

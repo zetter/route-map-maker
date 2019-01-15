@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- created by axpde for Wikipedia -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="500" height="500" viewBox="0 0 500 500">
+<title>BSicon Kreuzung</title>
+
+<g fill="none">
+ <path d="M -25,220 H 575 M -25,280 H 575" stroke="#003399" stroke-width="40" stroke-dasharray="50"/>
+ <path d="M 250,0 V 500" stroke="#be2d2c" stroke-width="100" />
+</g>
+</svg>

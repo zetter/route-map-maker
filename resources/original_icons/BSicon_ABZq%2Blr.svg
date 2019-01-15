@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- created by axpde for Wikipedia -->
+<svg xmlns="http://www.w3.org/2000/svg"
+	width="500" height="500" viewBox="0 0 500 500">
+<title>BSicon Abzweig</title>
+
+<g stroke="#be2d2c" stroke-width="100" fill="none">
+ <path d="M 0,250 H 500" />
+ <circle cx="0" cy="500" r="250" />
+ <circle cx="500" cy="500" r="250" />
+</g>
+</svg>

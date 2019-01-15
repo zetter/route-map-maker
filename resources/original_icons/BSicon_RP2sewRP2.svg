@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<title>RP2sewRP2</title>
+
+<g style="stroke:#999;stroke-width:110px;fill:none;">
+<path d="M 0,250 L 500,250"	/>
+<circle cx="500" cy="500" r="250" />
+<circle cx="0"   cy="500" r="250" />
+</g>
+
+<g style="stroke:#FFF;stroke-width:25px;fill:none;stroke-dasharray:62.5px;">
+<path d="M 31.25,250 L 500,250" />
+
+<g style="stroke-dasharray:65px;">
+<circle cx="500" cy="500" r="250" 
+	transform="rotate(10  500 500)" />
+<circle cx="0"   cy="500" r="250" 
+	transform="rotate(188 0   500)" />
+</g>
+</g>
+
+</svg>

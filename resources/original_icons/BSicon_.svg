@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<title>BS: Empty icon</title>
+<!-- Transparent tag to prevent empty draw -->
+<polygon points="0,0 500,0 500,500 0,500" stroke="none" fill="none" />
+</svg>

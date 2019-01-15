@@ -3,513 +3,2093 @@
   "tilesize": 50,
   "tiles": [
     {
-      "name": "corner",
-      "symmetry": "L",
-      "weight": 1.0
-    },
-    {
-      "name": "cross",
-      "symmetry": "I",
-      "weight": 1.0
-    },
-    {
       "name": "empty",
       "symmetry": "X",
-      "weight": 3.0
+      "weight": 4.0
     },
     {
-      "name": "line",
+      "name": "b-halt",
+      "symmetry": "T",
+      "weight": 0.1
+    },
+    {
+      "name": "b-i",
+      "symmetry": "T",
+      "weight": 1.0
+    },
+    {
+      "name": "b-l-tunnel",
+      "symmetry": "L",
+      "weight": 0.4
+    },
+    {
+      "name": "b-l",
+      "symmetry": "L",
+      "weight": 1.0
+    },
+    {
+      "name": "b-station",
+      "symmetry": "I",
+      "weight": 2.0
+    },
+    {
+      "name": "b-t",
+      "symmetry": "T",
+      "weight": 1.0
+    },
+    {
+      "name": "b-tunnel-start",
+      "symmetry": "T",
+      "weight": 1.0
+    },
+    {
+      "name": "b-tunnel",
+      "symmetry": "T",
+      "weight": 1.0
+    },
+    {
+      "name": "b-under-r-bridge",
       "symmetry": "I",
       "weight": 1.0
     },
     {
-      "name": "t",
-      "symmetry": "T",
-      "weight": 0.5
+      "name": "b-under-r-tunnel",
+      "symmetry": "I",
+      "weight": 1.0
     },
     {
-      "name": "end",
+      "name": "b-x",
+      "symmetry": "X",
+      "weight": 0.1
+    },
+    {
+      "name": "b",
+      "symmetry": "I",
+      "weight": 1.0
+    },
+    {
+      "name": "r-halt",
       "symmetry": "T",
       "weight": 0.1
     },
     {
-      "name": "station",
-      "symmetry": "I",
-      "weight": 0.5
+      "name": "r-i",
+      "symmetry": "T",
+      "weight": 1.0
     },
     {
-      "name": "line-b",
-      "symmetry": "I",
-      "weight": 0.3
-    },
-    {
-      "name": "corner-b",
+      "name": "r-l",
       "symmetry": "L",
-      "weight": 0.3
+      "weight": 1.0
     },
     {
-      "name": "cross-b-r",
+      "name": "r-station",
+      "symmetry": "I",
+      "weight": 2.0
+    },
+    {
+      "name": "r-t",
+      "symmetry": "T",
+      "weight": 1.0
+    },
+    {
+      "name": "r-x",
+      "symmetry": "X",
+      "weight": 1.0
+    },
+    {
+      "name": "r",
+      "symmetry": "I",
+      "weight": 1.0
+    },
+    {
+      "name": "road-l",
+      "symmetry": "L",
+      "weight": 0.5
+    },
+    {
+      "name": "road-over-b-bridge",
+      "symmetry": "I",
+      "weight": 0.5
+    },
+    {
+      "name": "road-t",
+      "symmetry": "T",
+      "weight": 0.1
+    },
+    {
+      "name": "road-under-r-bridge",
       "symmetry": "I",
       "weight": 0.1
     },
     {
-      "name": "cross-r-b",
-      "symmetry": "I",
+      "name": "road-x",
+      "symmetry": "X",
       "weight": 0.1
+    },
+    {
+      "name": "road",
+      "symmetry": "I",
+      "weight": 0.5
+    },
+    {
+      "name": "road-halt",
+      "symmetry": "T",
+      "weight": 0.05
     }
   ],
   "neighbors": [
     {
-      "left": "corner",
-      "right": "corner 1"
-    },
-    {
-      "left": "corner 1",
-      "right": "corner"
-    },
-    {
-      "left": "corner",
-      "right": "cross"
-    },
-    {
-      "left": "corner",
-      "right": "cross 1"
-    },
-    {
-      "left": "corner 1",
-      "right": "empty"
-    },
-    {
-      "left": "corner",
-      "right": "line"
-    },
-    {
-      "left": "corner 1",
-      "right": "line 1"
-    },
-    {
-      "left": "corner",
-      "right": "t"
-    },
-    {
-      "left": "corner",
-      "right": "t 3"
-    },
-    {
-      "left": "corner 1",
-      "right": "t 1"
-    },
-    {
-      "left": "corner",
-      "right": "end 3"
-    },
-    {
-      "left": "corner 1",
-      "right": "end"
-    },
-    {
-      "left": "corner 1",
-      "right": "end 1"
-    },
-    {
-      "left": "corner",
-      "right": "station 1"
-    },
-    {
-      "left": "corner 1",
-      "right": "station"
-    },
-    {
-      "left": "corner 1",
-      "right": "line-b 1"
-    },
-    {
-      "left": "corner 1",
-      "right": "corner-b"
-    },
-    {
-      "left": "corner",
-      "right": "cross-b-r"
-    },
-    {
-      "left": "corner",
-      "right": "cross-r-b 1"
-    },
-    {
-      "left": "cross",
-      "right": "cross"
-    },
-    {
-      "left": "cross",
-      "right": "cross 1"
-    },
-    {
-      "left": "cross 1",
-      "right": "cross"
-    },
-    {
-      "left": "cross 1",
-      "right": "cross 1"
-    },
-    {
-      "left": "cross",
-      "right": "line"
-    },
-    {
-      "left": "cross 1",
-      "right": "line"
-    },
-    {
-      "left": "cross",
-      "right": "t"
-    },
-    {
-      "left": "cross",
-      "right": "t 3"
-    },
-    {
-      "left": "cross 1",
-      "right": "t"
-    },
-    {
-      "left": "cross 1",
-      "right": "t 3"
-    },
-    {
-      "left": "cross",
-      "right": "end 3"
-    },
-    {
-      "left": "cross 1",
-      "right": "end 3"
-    },
-    {
-      "left": "cross",
-      "right": "station 1"
-    },
-    {
-      "left": "cross 1",
-      "right": "station 1"
-    },
-    {
-      "left": "cross",
-      "right": "cross-b-r"
-    },
-    {
-      "left": "cross 1",
-      "right": "cross-b-r"
-    },
-    {
-      "left": "cross",
-      "right": "cross-r-b 1"
-    },
-    {
-      "left": "cross 1",
-      "right": "cross-r-b 1"
-    },
-    {
       "left": "empty",
       "right": "empty"
     },
     {
       "left": "empty",
-      "right": "line 1"
+      "right": "b-halt"
     },
     {
       "left": "empty",
-      "right": "t 1"
+      "right": "b-halt 1"
     },
     {
       "left": "empty",
-      "right": "end"
+      "right": "b-i 1"
     },
     {
       "left": "empty",
-      "right": "end 1"
+      "right": "b-l-tunnel"
     },
     {
       "left": "empty",
-      "right": "station"
+      "right": "b-l"
     },
     {
       "left": "empty",
-      "right": "line-b 1"
+      "right": "b-station"
     },
     {
       "left": "empty",
-      "right": "corner-b"
+      "right": "b-t 3"
     },
     {
-      "left": "line",
-      "right": "line"
+      "left": "empty",
+      "right": "b-tunnel-start"
     },
     {
-      "left": "line 1",
-      "right": "line 1"
+      "left": "empty",
+      "right": "b-tunnel 1"
     },
     {
-      "left": "line",
-      "right": "t"
+      "left": "empty",
+      "right": "b-tunnel 3"
     },
     {
-      "left": "line",
-      "right": "t 3"
+      "left": "empty",
+      "right": "b 1"
     },
     {
-      "left": "line 1",
-      "right": "t 1"
+      "left": "empty",
+      "right": "r-halt"
     },
     {
-      "left": "line",
-      "right": "end 3"
+      "left": "empty",
+      "right": "r-halt 1"
     },
     {
-      "left": "line 1",
-      "right": "end"
+      "left": "empty",
+      "right": "r-i 1"
     },
     {
-      "left": "line 1",
-      "right": "end 1"
+      "left": "empty",
+      "right": "r-l"
     },
     {
-      "left": "line",
-      "right": "station 1"
+      "left": "empty",
+      "right": "r-station"
     },
     {
-      "left": "line 1",
-      "right": "station"
+      "left": "empty",
+      "right": "r-t 1"
     },
     {
-      "left": "line 1",
-      "right": "line-b 1"
+      "left": "empty",
+      "right": "r 1"
     },
     {
-      "left": "line 1",
-      "right": "corner-b"
+      "left": "empty",
+      "right": "road-l"
     },
     {
-      "left": "line",
-      "right": "cross-b-r"
+      "left": "empty",
+      "right": "road-t 1"
     },
     {
-      "left": "line",
-      "right": "cross-r-b 1"
+      "left": "empty",
+      "right": "road 1"
     },
     {
-      "left": "t",
-      "right": "t"
+      "left": "empty",
+      "right": "road-halt"
     },
     {
-      "left": "t",
-      "right": "t 3"
+      "left": "empty",
+      "right": "road-halt 1"
     },
     {
-      "left": "t 1",
-      "right": "t"
+      "left": "b-halt",
+      "right": "b-halt"
     },
     {
-      "left": "t 1",
-      "right": "t 3"
+      "left": "b-halt",
+      "right": "b-halt 1"
     },
     {
-      "left": "t 3",
-      "right": "t 1"
+      "left": "b-halt 1",
+      "right": "b-halt 3"
     },
     {
-      "left": "t",
-      "right": "end 3"
+      "left": "b-halt 3",
+      "right": "b-halt"
     },
     {
-      "left": "t 1",
-      "right": "end 3"
+      "left": "b-halt 3",
+      "right": "b-halt 1"
     },
     {
-      "left": "t 3",
-      "right": "end"
+      "left": "b-halt",
+      "right": "b-i 1"
     },
     {
-      "left": "t 3",
-      "right": "end 1"
+      "left": "b-halt 1",
+      "right": "b-i"
     },
     {
-      "left": "t",
-      "right": "station 1"
+      "left": "b-halt 3",
+      "right": "b-i 1"
     },
     {
-      "left": "t 1",
-      "right": "station 1"
+      "left": "b-halt",
+      "right": "b-l-tunnel"
     },
     {
-      "left": "t 3",
-      "right": "station"
+      "left": "b-halt 3",
+      "right": "b-l-tunnel"
     },
     {
-      "left": "t 3",
-      "right": "line-b 1"
+      "left": "b-halt",
+      "right": "b-l"
     },
     {
-      "left": "t 3",
-      "right": "corner-b"
+      "left": "b-halt 1",
+      "right": "b-l 1"
     },
     {
-      "left": "t",
-      "right": "cross-b-r"
+      "left": "b-halt 3",
+      "right": "b-l"
     },
     {
-      "left": "t 1",
-      "right": "cross-b-r"
+      "left": "b-halt",
+      "right": "b-station"
     },
     {
-      "left": "t",
-      "right": "cross-r-b 1"
+      "left": "b-halt 1",
+      "right": "b-station 1"
     },
     {
-      "left": "t 1",
-      "right": "cross-r-b 1"
+      "left": "b-halt 3",
+      "right": "b-station"
     },
     {
-      "left": "end",
-      "right": "end"
+      "left": "b-halt",
+      "right": "b-t 3"
     },
     {
-      "left": "end",
-      "right": "end 1"
+      "left": "b-halt 1",
+      "right": "b-t"
     },
     {
-      "left": "end 1",
-      "right": "end 3"
+      "left": "b-halt 1",
+      "right": "b-t 1"
     },
     {
-      "left": "end 3",
-      "right": "end"
+      "left": "b-halt 3",
+      "right": "b-t 3"
     },
     {
-      "left": "end 3",
-      "right": "end 1"
+      "left": "b-halt",
+      "right": "b-tunnel-start"
     },
     {
-      "left": "end",
-      "right": "station"
+      "left": "b-halt 1",
+      "right": "b-tunnel-start 1"
     },
     {
-      "left": "end 1",
-      "right": "station 1"
+      "left": "b-halt 3",
+      "right": "b-tunnel-start"
     },
     {
-      "left": "end 3",
-      "right": "station"
+      "left": "b-halt",
+      "right": "b-tunnel 1"
     },
     {
-      "left": "end",
-      "right": "line-b 1"
+      "left": "b-halt",
+      "right": "b-tunnel 3"
     },
     {
-      "left": "end 3",
-      "right": "line-b 1"
+      "left": "b-halt 3",
+      "right": "b-tunnel 1"
     },
     {
-      "left": "end",
-      "right": "corner-b"
+      "left": "b-halt 3",
+      "right": "b-tunnel 3"
     },
     {
-      "left": "end 3",
-      "right": "corner-b"
+      "left": "b-halt 1",
+      "right": "b-under-r-bridge"
     },
     {
-      "left": "end 1",
-      "right": "cross-b-r"
+      "left": "b-halt 1",
+      "right": "b-x"
     },
     {
-      "left": "end 1",
-      "right": "cross-r-b 1"
+      "left": "b-halt",
+      "right": "b 1"
     },
     {
-      "left": "station",
-      "right": "station"
+      "left": "b-halt 1",
+      "right": "b"
     },
     {
-      "left": "station 1",
-      "right": "station 1"
+      "left": "b-halt 3",
+      "right": "b 1"
     },
     {
-      "left": "station",
-      "right": "line-b 1"
+      "left": "b-halt",
+      "right": "r-halt"
     },
     {
-      "left": "station",
-      "right": "corner-b"
+      "left": "b-halt",
+      "right": "r-halt 1"
     },
     {
-      "left": "station 1",
-      "right": "cross-b-r"
+      "left": "b-halt 3",
+      "right": "r-halt"
     },
     {
-      "left": "station 1",
-      "right": "cross-r-b 1"
+      "left": "b-halt 3",
+      "right": "r-halt 1"
     },
     {
-      "left": "line-b",
-      "right": "line-b"
+      "left": "b-halt",
+      "right": "r-i 1"
     },
     {
-      "left": "line-b 1",
-      "right": "line-b 1"
+      "left": "b-halt 3",
+      "right": "r-i 1"
     },
     {
-      "left": "line-b",
-      "right": "corner-b 1"
+      "left": "b-halt",
+      "right": "r-l"
     },
     {
-      "left": "line-b 1",
-      "right": "corner-b"
+      "left": "b-halt 3",
+      "right": "r-l"
     },
     {
-      "left": "line-b",
-      "right": "cross-b-r 1"
+      "left": "b-halt",
+      "right": "r-station"
     },
     {
-      "left": "line-b",
-      "right": "cross-r-b"
+      "left": "b-halt 3",
+      "right": "r-station"
     },
     {
-      "left": "corner-b",
-      "right": "corner-b 1"
+      "left": "b-halt",
+      "right": "r-t 1"
     },
     {
-      "left": "corner-b 1",
-      "right": "corner-b"
+      "left": "b-halt 3",
+      "right": "r-t 1"
     },
     {
-      "left": "corner-b",
-      "right": "cross-b-r 1"
+      "left": "b-halt",
+      "right": "r 1"
     },
     {
-      "left": "corner-b",
-      "right": "cross-r-b"
+      "left": "b-halt 3",
+      "right": "r 1"
     },
     {
-      "left": "cross-b-r",
-      "right": "cross-b-r"
+      "left": "b-halt",
+      "right": "road-l"
     },
     {
-      "left": "cross-b-r 1",
-      "right": "cross-b-r 1"
+      "left": "b-halt 3",
+      "right": "road-l"
     },
     {
-      "left": "cross-b-r",
-      "right": "cross-r-b 1"
+      "left": "b-halt 1",
+      "right": "road-over-b-bridge 1"
     },
     {
-      "left": "cross-b-r 1",
-      "right": "cross-r-b"
+      "left": "b-halt",
+      "right": "road-t 1"
     },
     {
-      "left": "cross-r-b",
-      "right": "cross-r-b"
+      "left": "b-halt 3",
+      "right": "road-t 1"
     },
     {
-      "left": "cross-r-b 1",
-      "right": "cross-r-b 1"
+      "left": "b-halt",
+      "right": "road 1"
+    },
+    {
+      "left": "b-halt 3",
+      "right": "road 1"
+    },
+    {
+      "left": "b-halt",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-halt",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-halt 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-halt 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-i",
+      "right": "b-i"
+    },
+    {
+      "left": "b-i 1",
+      "right": "b-i 3"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-i 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-l-tunnel"
+    },
+    {
+      "left": "b-i",
+      "right": "b-l 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-l"
+    },
+    {
+      "left": "b-i",
+      "right": "b-station 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-station"
+    },
+    {
+      "left": "b-i",
+      "right": "b-t"
+    },
+    {
+      "left": "b-i",
+      "right": "b-t 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-t 3"
+    },
+    {
+      "left": "b-i",
+      "right": "b-tunnel-start 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-tunnel-start"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-i",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-i",
+      "right": "b-x"
+    },
+    {
+      "left": "b-i",
+      "right": "b"
+    },
+    {
+      "left": "b-i 3",
+      "right": "b 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-i 1",
+      "right": "r-i 3"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r-l"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r-station"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "r 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "road-l"
+    },
+    {
+      "left": "b-i",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "road 1"
+    },
+    {
+      "left": "b-i 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-i 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-l-tunnel",
+      "right": "b-l-tunnel 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-l-tunnel"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-l"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-station"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-t 3"
+    },
+    {
+      "left": "b-l-tunnel",
+      "right": "b-tunnel-start 3"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-tunnel-start"
+    },
+    {
+      "left": "b-l-tunnel",
+      "right": "b-tunnel"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-l-tunnel",
+      "right": "b-under-r-tunnel"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "b 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r-l"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r-station"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "r 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "road-l"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "road 1"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-l-tunnel 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-l",
+      "right": "b-l 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b-l"
+    },
+    {
+      "left": "b-l",
+      "right": "b-station 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b-station"
+    },
+    {
+      "left": "b-l",
+      "right": "b-t"
+    },
+    {
+      "left": "b-l",
+      "right": "b-t 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b-t 3"
+    },
+    {
+      "left": "b-l",
+      "right": "b-tunnel-start 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b-tunnel-start"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-l",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-l",
+      "right": "b-x"
+    },
+    {
+      "left": "b-l",
+      "right": "b"
+    },
+    {
+      "left": "b-l 1",
+      "right": "b 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r-l"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r-station"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "r 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "road-l"
+    },
+    {
+      "left": "b-l",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "road 1"
+    },
+    {
+      "left": "b-l 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-l 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-station",
+      "right": "b-station"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b-station 1"
+    },
+    {
+      "left": "b-station",
+      "right": "b-t 3"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b-t"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b-t 1"
+    },
+    {
+      "left": "b-station",
+      "right": "b-tunnel-start"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b-tunnel-start 1"
+    },
+    {
+      "left": "b-station",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-station",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b-x"
+    },
+    {
+      "left": "b-station",
+      "right": "b 1"
+    },
+    {
+      "left": "b-station 1",
+      "right": "b"
+    },
+    {
+      "left": "b-station",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-station",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-station",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-station",
+      "right": "r-l"
+    },
+    {
+      "left": "b-station",
+      "right": "r-station"
+    },
+    {
+      "left": "b-station",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-station",
+      "right": "r 1"
+    },
+    {
+      "left": "b-station",
+      "right": "road-l"
+    },
+    {
+      "left": "b-station 1",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-station",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-station",
+      "right": "road 1"
+    },
+    {
+      "left": "b-station",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-station",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-t",
+      "right": "b-t"
+    },
+    {
+      "left": "b-t",
+      "right": "b-t 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "b-t 3"
+    },
+    {
+      "left": "b-t 3",
+      "right": "b-t"
+    },
+    {
+      "left": "b-t 3",
+      "right": "b-t 1"
+    },
+    {
+      "left": "b-t",
+      "right": "b-tunnel-start 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "b-tunnel-start"
+    },
+    {
+      "left": "b-t 3",
+      "right": "b-tunnel-start 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-t",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-t 3",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-t",
+      "right": "b-x"
+    },
+    {
+      "left": "b-t 3",
+      "right": "b-x"
+    },
+    {
+      "left": "b-t",
+      "right": "b"
+    },
+    {
+      "left": "b-t 1",
+      "right": "b 1"
+    },
+    {
+      "left": "b-t 3",
+      "right": "b"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r-l"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r-station"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "r 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "road-l"
+    },
+    {
+      "left": "b-t",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-t 3",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "road 1"
+    },
+    {
+      "left": "b-t 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-t 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "b-tunnel-start"
+    },
+    {
+      "left": "b-tunnel-start 1",
+      "right": "b-tunnel-start 3"
+    },
+    {
+      "left": "b-tunnel-start 3",
+      "right": "b-tunnel-start 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-tunnel-start 1",
+      "right": "b-tunnel"
+    },
+    {
+      "left": "b-tunnel-start 3",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-tunnel-start 1",
+      "right": "b-under-r-tunnel"
+    },
+    {
+      "left": "b-tunnel-start 3",
+      "right": "b-x"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "b 1"
+    },
+    {
+      "left": "b-tunnel-start 3",
+      "right": "b"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r-l"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r-station"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "r 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "road-l"
+    },
+    {
+      "left": "b-tunnel-start 3",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "road 1"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-tunnel-start",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-tunnel",
+      "right": "b-tunnel"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "b-tunnel 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "b-tunnel 3"
+    },
+    {
+      "left": "b-tunnel",
+      "right": "b-under-r-tunnel"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "b 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "b 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r-halt"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r-l"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r-l"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r-station"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r-station"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "r 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "r 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "road-l"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "road-l"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "road 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "road 1"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-tunnel 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "b-tunnel 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "b-under-r-bridge",
+      "right": "b-under-r-bridge"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "b-under-r-bridge 1"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "b-under-r-tunnel 1"
+    },
+    {
+      "left": "b-under-r-bridge",
+      "right": "b-x"
+    },
+    {
+      "left": "b-under-r-bridge",
+      "right": "b"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-halt 3"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-i"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-l 1"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-station 1"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-t"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-t 3"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r-x"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "r"
+    },
+    {
+      "left": "b-under-r-bridge",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b-under-r-bridge 1",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "b-under-r-tunnel",
+      "right": "b-under-r-tunnel"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "b-under-r-tunnel 1"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-halt 3"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-i"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-l 1"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-station 1"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-t"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-t 3"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r-x"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "r"
+    },
+    {
+      "left": "b-under-r-tunnel 1",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "b-x",
+      "right": "b-x"
+    },
+    {
+      "left": "b-x",
+      "right": "b"
+    },
+    {
+      "left": "b-x",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b",
+      "right": "b"
+    },
+    {
+      "left": "b 1",
+      "right": "b 1"
+    },
+    {
+      "left": "b 1",
+      "right": "r-halt"
+    },
+    {
+      "left": "b 1",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "b 1",
+      "right": "r-i 1"
+    },
+    {
+      "left": "b 1",
+      "right": "r-l"
+    },
+    {
+      "left": "b 1",
+      "right": "r-station"
+    },
+    {
+      "left": "b 1",
+      "right": "r-t 1"
+    },
+    {
+      "left": "b 1",
+      "right": "r 1"
+    },
+    {
+      "left": "b 1",
+      "right": "road-l"
+    },
+    {
+      "left": "b",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "b 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "b 1",
+      "right": "road 1"
+    },
+    {
+      "left": "b 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "b 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-halt",
+      "right": "r-halt"
+    },
+    {
+      "left": "r-halt",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-halt 3"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r-halt"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r-halt 1"
+    },
+    {
+      "left": "r-halt",
+      "right": "r-i 1"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-i"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r-i 1"
+    },
+    {
+      "left": "r-halt",
+      "right": "r-l"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-l 1"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r-l"
+    },
+    {
+      "left": "r-halt",
+      "right": "r-station"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-station 1"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r-station"
+    },
+    {
+      "left": "r-halt",
+      "right": "r-t 1"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-t"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-t 3"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r-t 1"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r-x"
+    },
+    {
+      "left": "r-halt",
+      "right": "r 1"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "r"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "r 1"
+    },
+    {
+      "left": "r-halt",
+      "right": "road-l"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "road-l"
+    },
+    {
+      "left": "r-halt",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r-halt 1",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r-halt",
+      "right": "road 1"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "road 1"
+    },
+    {
+      "left": "r-halt",
+      "right": "road-halt"
+    },
+    {
+      "left": "r-halt",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "r-halt 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-i",
+      "right": "r-i"
+    },
+    {
+      "left": "r-i 1",
+      "right": "r-i 3"
+    },
+    {
+      "left": "r-i 3",
+      "right": "r-i 1"
+    },
+    {
+      "left": "r-i",
+      "right": "r-l 1"
+    },
+    {
+      "left": "r-i 3",
+      "right": "r-l"
+    },
+    {
+      "left": "r-i",
+      "right": "r-station 1"
+    },
+    {
+      "left": "r-i 3",
+      "right": "r-station"
+    },
+    {
+      "left": "r-i",
+      "right": "r-t"
+    },
+    {
+      "left": "r-i",
+      "right": "r-t 3"
+    },
+    {
+      "left": "r-i 3",
+      "right": "r-t 1"
+    },
+    {
+      "left": "r-i",
+      "right": "r-x"
+    },
+    {
+      "left": "r-i",
+      "right": "r"
+    },
+    {
+      "left": "r-i 3",
+      "right": "r 1"
+    },
+    {
+      "left": "r-i 3",
+      "right": "road-l"
+    },
+    {
+      "left": "r-i 3",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r-i",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r-i 3",
+      "right": "road 1"
+    },
+    {
+      "left": "r-i 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "r-i 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-l",
+      "right": "r-l 1"
+    },
+    {
+      "left": "r-l 1",
+      "right": "r-l"
+    },
+    {
+      "left": "r-l",
+      "right": "r-station 1"
+    },
+    {
+      "left": "r-l 1",
+      "right": "r-station"
+    },
+    {
+      "left": "r-l",
+      "right": "r-t"
+    },
+    {
+      "left": "r-l",
+      "right": "r-t 3"
+    },
+    {
+      "left": "r-l 1",
+      "right": "r-t 1"
+    },
+    {
+      "left": "r-l",
+      "right": "r-x"
+    },
+    {
+      "left": "r-l",
+      "right": "r"
+    },
+    {
+      "left": "r-l 1",
+      "right": "r 1"
+    },
+    {
+      "left": "r-l 1",
+      "right": "road-l"
+    },
+    {
+      "left": "r-l 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r-l",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r-l 1",
+      "right": "road 1"
+    },
+    {
+      "left": "r-l 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "r-l 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-station",
+      "right": "r-station"
+    },
+    {
+      "left": "r-station 1",
+      "right": "r-station 1"
+    },
+    {
+      "left": "r-station",
+      "right": "r-t 1"
+    },
+    {
+      "left": "r-station 1",
+      "right": "r-t"
+    },
+    {
+      "left": "r-station 1",
+      "right": "r-t 3"
+    },
+    {
+      "left": "r-station 1",
+      "right": "r-x"
+    },
+    {
+      "left": "r-station",
+      "right": "r 1"
+    },
+    {
+      "left": "r-station 1",
+      "right": "r"
+    },
+    {
+      "left": "r-station",
+      "right": "road-l"
+    },
+    {
+      "left": "r-station",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r-station 1",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r-station",
+      "right": "road 1"
+    },
+    {
+      "left": "r-station",
+      "right": "road-halt"
+    },
+    {
+      "left": "r-station",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-t",
+      "right": "r-t"
+    },
+    {
+      "left": "r-t",
+      "right": "r-t 3"
+    },
+    {
+      "left": "r-t 1",
+      "right": "r-t"
+    },
+    {
+      "left": "r-t 1",
+      "right": "r-t 3"
+    },
+    {
+      "left": "r-t 3",
+      "right": "r-t 1"
+    },
+    {
+      "left": "r-t",
+      "right": "r-x"
+    },
+    {
+      "left": "r-t 1",
+      "right": "r-x"
+    },
+    {
+      "left": "r-t",
+      "right": "r"
+    },
+    {
+      "left": "r-t 1",
+      "right": "r"
+    },
+    {
+      "left": "r-t 3",
+      "right": "r 1"
+    },
+    {
+      "left": "r-t 3",
+      "right": "road-l"
+    },
+    {
+      "left": "r-t 3",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r-t",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r-t 1",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r-t 3",
+      "right": "road 1"
+    },
+    {
+      "left": "r-t 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "r-t 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "r-x",
+      "right": "r-x"
+    },
+    {
+      "left": "r-x",
+      "right": "r"
+    },
+    {
+      "left": "r-x",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r",
+      "right": "r"
+    },
+    {
+      "left": "r 1",
+      "right": "r 1"
+    },
+    {
+      "left": "r 1",
+      "right": "road-l"
+    },
+    {
+      "left": "r 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "r",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "r 1",
+      "right": "road 1"
+    },
+    {
+      "left": "r 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "r 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "road-l",
+      "right": "road-l 1"
+    },
+    {
+      "left": "road-l 1",
+      "right": "road-l"
+    },
+    {
+      "left": "road-l",
+      "right": "road-over-b-bridge"
+    },
+    {
+      "left": "road-l",
+      "right": "road-t"
+    },
+    {
+      "left": "road-l",
+      "right": "road-t 3"
+    },
+    {
+      "left": "road-l 1",
+      "right": "road-t 1"
+    },
+    {
+      "left": "road-l",
+      "right": "road-under-r-bridge"
+    },
+    {
+      "left": "road-l",
+      "right": "road-x"
+    },
+    {
+      "left": "road-l",
+      "right": "road"
+    },
+    {
+      "left": "road-l 1",
+      "right": "road 1"
+    },
+    {
+      "left": "road-l",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road-l 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "road-l 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road-over-b-bridge"
+    },
+    {
+      "left": "road-over-b-bridge 1",
+      "right": "road-over-b-bridge 1"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road-t"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road-t 3"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road-under-r-bridge"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road-x"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road"
+    },
+    {
+      "left": "road-over-b-bridge",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road-t",
+      "right": "road-t"
+    },
+    {
+      "left": "road-t",
+      "right": "road-t 3"
+    },
+    {
+      "left": "road-t 1",
+      "right": "road-t"
+    },
+    {
+      "left": "road-t 1",
+      "right": "road-t 3"
+    },
+    {
+      "left": "road-t 3",
+      "right": "road-t 1"
+    },
+    {
+      "left": "road-t",
+      "right": "road-under-r-bridge"
+    },
+    {
+      "left": "road-t 1",
+      "right": "road-under-r-bridge"
+    },
+    {
+      "left": "road-t",
+      "right": "road-x"
+    },
+    {
+      "left": "road-t 1",
+      "right": "road-x"
+    },
+    {
+      "left": "road-t",
+      "right": "road"
+    },
+    {
+      "left": "road-t 1",
+      "right": "road"
+    },
+    {
+      "left": "road-t 3",
+      "right": "road 1"
+    },
+    {
+      "left": "road-t",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road-t 1",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road-t 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "road-t 3",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "road-under-r-bridge",
+      "right": "road-under-r-bridge"
+    },
+    {
+      "left": "road-under-r-bridge 1",
+      "right": "road-under-r-bridge 1"
+    },
+    {
+      "left": "road-under-r-bridge",
+      "right": "road-x"
+    },
+    {
+      "left": "road-under-r-bridge",
+      "right": "road"
+    },
+    {
+      "left": "road-under-r-bridge",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road-x",
+      "right": "road-x"
+    },
+    {
+      "left": "road-x",
+      "right": "road"
+    },
+    {
+      "left": "road-x",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road",
+      "right": "road"
+    },
+    {
+      "left": "road 1",
+      "right": "road 1"
+    },
+    {
+      "left": "road",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road 1",
+      "right": "road-halt"
+    },
+    {
+      "left": "road 1",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "road-halt",
+      "right": "road-halt"
+    },
+    {
+      "left": "road-halt",
+      "right": "road-halt 1"
+    },
+    {
+      "left": "road-halt 1",
+      "right": "road-halt 3"
+    },
+    {
+      "left": "road-halt 3",
+      "right": "road-halt"
+    },
+    {
+      "left": "road-halt 3",
+      "right": "road-halt 1"
     }
   ]
 }

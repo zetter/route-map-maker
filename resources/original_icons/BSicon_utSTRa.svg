@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+ <title>utSTRa</title>
+ <g stroke="#003399">
+  <path d="M 250,0 V 250" stroke-width="100"/>
+  <path d="M 220,525 V 275 m 60,0 V 500" stroke-width="40" stroke-dasharray="50"/>
+ </g>
+ <path d="m 75,200 a 1000,2500 0 0 0 350,0" stroke="#80A080" stroke-width="60" fill="none"/>
+</svg>

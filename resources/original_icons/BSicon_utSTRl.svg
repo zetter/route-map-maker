@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+ <title>utSTRl</title>
+ <g stroke="#003399" stroke-width="40" fill="none">
+  <circle cx="500" cy="0" r="220" stroke-dasharray="43.2" stroke-dashoffset="21.6"/>
+  <circle cx="500" cy="0" r="280" stroke-dasharray="54.98" stroke-dashoffset="27.49"/>
+ </g>
+</svg>

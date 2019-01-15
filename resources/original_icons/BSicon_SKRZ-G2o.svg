@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" >
+	<title>SKRZ-G2o</title>
+	<g fill="none">
+		<path d="M 0,250 H 125 M 375,250 H 500" stroke="#999999" stroke-width="110"/>
+		<path d="M 31.25,250 H 93.75 M 406.25,250 H 468.75 " stroke="#FFFFFF" stroke-width="25" />
+    <path d="M 50,50 L 125,100 125,400 50,450 M 450,50 L 375,100 375,400 450,450" stroke="#80A080" stroke-width="50" />
+		<path d="M 250,0 V 500" stroke="#be2d2c" stroke-width="100" />
+  </g>
+</svg>

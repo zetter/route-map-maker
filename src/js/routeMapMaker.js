@@ -80,7 +80,7 @@ class RouteMapMaker {
                 var on_edge = (x === 0) || (x === this.FMX - 1) || (y === 0) || (y === this.FMY - 1);
 
                 for (t = 0; t < this.T; t++) {
-                    this.wave[x][y][t] = on_edge ? (t === 6) : true;
+                    this.wave[x][y][t] = on_edge ? (t === 0) : true;
                 }
 
                 this.changes[x][y] = on_edge;

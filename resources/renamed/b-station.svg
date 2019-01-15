@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+ <title>uHST</title>
+ <path stroke="#003399" d="M 250,0 V 500" stroke-width="100"/>
+ <circle fill="#003399" cx="250" cy="250" r="100"/>
+</svg>

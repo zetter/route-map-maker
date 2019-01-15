@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+	<title>RP2lf</title>
+	<g fill="none">
+		<circle cx="500" r="250" stroke="#999" stroke-width="110"/>
+		<circle cx="500" r="250" stroke="#fff" stroke-width="25" stroke-dasharray="62.5" stroke-dashoffset="67"/>
+	</g>
+</svg>

@@ -1,41 +1,33 @@
-import React from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import RouteMapMaker from '../js/routeMapMaker'
 
-class IndexPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.canvas = React.createRef();
-    this.mapRendered = this.mapRendered.bind(this)
-    this.state = {}
-  }
+const IndexPage = () => {
+  const canvas = useRef(null);
 
-  render() {
-    return <Layout>
-      <SEO title="Route Map Maker" />
-      {(this.state.imageURL ?
-        <>
-          <style dangerouslySetInnerHTML={{__html: `
-              .styled { background-image: url(${this.state.imageURL})}
-          `}} />
-          <div className='styled' style={{width: '500px', height: '500px'}}></div>
-        </>
-      :
-        <canvas ref={this.canvas} id="output" width="750px" height="750px"/>
-      )}
-    </Layout>
-  }
+  const [imageURL, setImageURL] = useState()
 
-  componentDidMount() {
-   let routeMapMaker = new RouteMapMaker(this.canvas.current);
-   routeMapMaker.start(this.mapRendered);
-  }
+  const mapRendered = () => { setImageURL(canvas.current.toDataURL("image/png"))}
 
-  mapRendered() {
-    this.setState({imageURL: this.canvas.current.toDataURL("image/png")})
-  }
+  useEffect(() => {
+    let routeMapMaker = new RouteMapMaker(canvas.current);
+    routeMapMaker.start(mapRendered);
+  }, [])
 
+  return <Layout>
+    <SEO title="Route Map Maker" />
+    {(imageURL ?
+      <>
+        <style dangerouslySetInnerHTML={{__html: `
+            .rendered-map { background-image: url(${imageURL})}
+        `}} />
+        <div className='.rendered-map' style={{width: '500px', height: '500px'}}></div>
+      </>
+    :
+      <canvas ref={canvas} id="output" width="750px" height="750px"/>
+    )}
+  </Layout>
 }
 
 export default IndexPage

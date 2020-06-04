@@ -53,7 +53,10 @@ class RouteMapMaker {
     });
   };
 
-  start() {
+
+  start(callback) {
+    this.callback = callback
+
     fetch("/tiles.json")
       .then(response =>  {
         return response.json();
@@ -69,33 +72,15 @@ class RouteMapMaker {
   startUpdate(err, data) {
     var isRunning = true;
     var computingStep = true;
-    var model = new WFC.SimpleTiledModel(data, null, 15, 15, false);
-    model.clear = function() {
-        var x,
-            y,
-            t;
-
-        for (x = 0; x < this.FMX; x++) {
-            for (y = 0; y < this.FMY; y++) {
-                var on_edge = (x === 0) || (x === this.FMX - 1) || (y === 0) || (y === this.FMY - 1);
-
-                for (t = 0; t < this.T; t++) {
-                    this.wave[x][y][t] = on_edge ? (t === 0) : true;
-                }
-
-                this.changes[x][y] = on_edge;
-            }
-        }
-
-        this.initiliazedField = true;
-        this.generationComplete = false;
-    };
+    var model = new WFC.SimpleTiledModel(data, null, 15, 15, true);
 
 
     var contradiction = false;
     var defaultColor = [0, 0, 0, 255];
     var generateContext = this.canvas.getContext("2d")
     var generateData = generateContext.createImageData(750, 750);
+    const updateInterval = 10
+    let updateCount = 0
     var update = () => {
       if (isRunning) {
         if (computingStep) {
@@ -105,12 +90,17 @@ class RouteMapMaker {
 
           contradiction = !model.iterate(2);
         } else {
-          model.graphics(generateData.data, defaultColor);
-          generateContext.putImageData(generateData, 0, 0);
+          if ((updateCount % updateInterval) === 0 || model.isGenerationComplete()) {
+            model.graphics(generateData.data, defaultColor);
+            generateContext.putImageData(generateData, 0, 0);
+          }
 
           if (model.isGenerationComplete()) {
             isRunning = false;
+            this.callback()
           }
+
+          updateCount = updateCount + 1
         }
 
         computingStep = !computingStep;

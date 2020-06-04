@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import RouteMapMaker from '../js/routeMapMaker'
+import DraggableMap from '../components/DraggableMap'
 
 const IndexPage = () => {
   const canvas = useRef(null);
@@ -22,10 +23,10 @@ const IndexPage = () => {
         <style dangerouslySetInnerHTML={{__html: `
             .rendered-map { background-image: url(${imageURL})}
         `}} />
-        <div className='.rendered-map' style={{width: '500px', height: '500px'}}></div>
+        <DraggableMap/>
       </>
     :
-      <canvas ref={canvas} id="output" width="750px" height="750px"/>
+      <canvas className="canvas" ref={canvas} width="750px" height="750px"/>
     )}
   </Layout>
 }

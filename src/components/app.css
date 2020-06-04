@@ -1,0 +1,15 @@
+.rendered-map {
+  width: 100%;
+  height: 100vh;
+  background-size: 750px;
+}
+
+@media (min-resolution: 2dppx) {
+  .rendered-map {
+    background-size: 375px;
+  }
+  .canvas {
+    transform: scale(0.5, 0.5);
+    transform-origin: 0% 0%;
+  }
+}

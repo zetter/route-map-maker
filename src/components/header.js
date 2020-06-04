@@ -5,28 +5,14 @@ import React from 'react'
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: `#BE2D2C`
+      background: `#BE2D2C`,
+      position: 'absolute',
+      zIndex: 100,
     }}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0.55rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+    <h1 style={{ margin: '10px', color: `white`, }}>
+      BSicon Map Generator
+    </h1>
   </div>
 )
 

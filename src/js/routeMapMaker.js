@@ -56,19 +56,18 @@ class RouteMapMaker {
   };
 
 
-  start(callback) {
+  async start(callback)  {
+    var generateContext = this.canvas.getContext("2d")
+    generateContext.clearRect(0, 0, this.x * this.tileSize, this.y * this.tileSize);
+
     this.callback = callback
 
-    fetch("/tiles.json")
-      .then(response =>  {
-        return response.json();
-      })
-      .then(data => {
-        this.addBitmapDataToStructure(data, this.startUpdate);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    if (!this.data) {
+      const response = await fetch("/tiles.json")
+      this.data = await response.json();
+    }
+
+    this.addBitmapDataToStructure(this.data, this.startUpdate)
   }
 
   startUpdate(err, data) {

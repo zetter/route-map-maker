@@ -18,15 +18,14 @@ const IndexPage = () => {
 
   return <Layout>
     <SEO title="Route Map Maker" />
-    {(imageURL ?
+    <canvas className="canvas" ref={canvas} width="750px" height="750px"/>
+    {(imageURL &&
       <>
         <style dangerouslySetInnerHTML={{__html: `
             .rendered-map { background-image: url(${imageURL})}
         `}} />
         <DraggableMap/>
       </>
-    :
-      <canvas className="canvas" ref={canvas} width="750px" height="750px"/>
     )}
   </Layout>
 }

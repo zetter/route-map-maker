@@ -3,10 +3,12 @@ import Jimp from 'jimp';
 
 class RouteMapMaker {
 
-  constructor(canvas) {
+  constructor({canvas, x, y, tileSize}) {
     this.canvas = canvas;
     this.startUpdate = this.startUpdate.bind(this);
-    console.log(canvas)
+    this.x = x
+    this.y = y
+    this.tileSize = tileSize
   }
 
   loadTileBitmapData(basePath, tile, number) {
@@ -72,13 +74,13 @@ class RouteMapMaker {
   startUpdate(err, data) {
     var isRunning = true;
     var computingStep = true;
-    var model = new WFC.SimpleTiledModel(data, null, 15, 15, true);
+    var model = new WFC.SimpleTiledModel(data, null, this.x, this.y, true);
 
 
     var contradiction = false;
-    var defaultColor = [0, 0, 0, 255];
+    var defaultColor = [255, 255, 255, 255];
     var generateContext = this.canvas.getContext("2d")
-    var generateData = generateContext.createImageData(750, 750);
+    var generateData = generateContext.createImageData(this.x * this.tileSize, this.y * this.tileSize);
     const updateInterval = 10
     let updateCount = 0
     var update = () => {

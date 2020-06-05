@@ -42,12 +42,14 @@ body {
   cursor: move;
 }
 
-@media (min-resolution: 2dppx) {
-  .canvas {
-    transform: scale(0.5, 0.5);
-    transform-origin: 0% 0%;
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    .canvas {
+      transform: scale(0.5, 0.5);
+      transform-origin: 0% 0%;
+    }
   }
-}
 
 .rendered-map {
   z-index: 20;

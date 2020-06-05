@@ -55,7 +55,7 @@ const IndexPage = () => {
     </div>
     <SEO title="Route Map Maker" />
     <div className="canvas-wrapper">
-      <canvas ref={canvas} width={`${width}px`} height={`${height}px`} />
+      <canvas className="canvas" ref={canvas} width={`${width}px`} height={`${height}px`} />
     </div>
     {(imageURL &&
       <>
@@ -64,11 +64,13 @@ const IndexPage = () => {
               background-image: url(${imageURL});
               background-size: ${width}px;
             }
-            @media (min-resolution: 2dppx) {
-              .rendered-map {
-                background-size: ${(width)/2}px;
+            @media
+              (-webkit-min-device-pixel-ratio: 2),
+              (min-resolution: 192dpi){
+                .rendered-map {
+                  background-size: ${(width)/2}px;
+                }
               }
-            }
         `}} />
         <DraggableMap/>
       </>

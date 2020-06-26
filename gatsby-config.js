@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Route Map Maker`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `BSicon map generator`,
+    description: `Creates random maps using BSicons`,
+    author: `Chris Zetter`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

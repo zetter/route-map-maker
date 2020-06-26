@@ -50,10 +50,17 @@ const IndexPage = () => {
       {(tab === 'about') &&
         <div>
           <h3>About</h3>
+          <p>This makes random maps using BSicons from Wikipedia.</p>
+          <p>
+            <a href="https://chriszetter.com/blog/2020/06/25/mapping-anything-with-bsicons/">Find out more about BSicons</a>
+            {' '}and how{' '}
+            <a href="https://chriszetter.com/blog/2020/06/26/generating-random-maps/">the generator was made</a>.
+          </p>
+          <p><a href="https://github.com/zetter/route-map-maker">Code on github</a>.</p>
         </div>
       }
     </div>
-    <SEO title="Route Map Maker" />
+    <SEO />
     <div className="canvas-wrapper">
       <canvas className="canvas" ref={canvas} width={`${width}px`} height={`${height}px`} />
     </div>
